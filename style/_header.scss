@@ -1,0 +1,70 @@
+header{
+
+  .logo{
+    width: 4.5rem;
+    padding: 1rem;
+    @media (min-width:670px){
+      width: 4rem;
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+  nav{
+    display: none;
+  }
+
+  .banner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    
+    @media (min-width:670px) {
+      flex-direction: row;
+      padding-top: 8rem;
+
+    }
+
+    &__title{
+      text-transform: uppercase;
+      font-size: 6rem;
+      letter-spacing: 0.5rem;
+      color: $text-color-main;
+
+    }
+    .title--top{
+      letter-spacing: 1rem;
+
+      @media (min-width:670px){
+        margin-right: 3rem;
+        letter-spacing: unset;
+
+      }
+    }
+
+
+  }
+
+  .band-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    @media (min-width:670px){
+      margin-top: -1rem;
+      }
+
+    &__text{
+      color: $text-color-main;
+      font-size: 1.2rem;
+
+      @media (min-width:670px){
+        margin-left: 25rem;
+        }
+    }
+  }
+}

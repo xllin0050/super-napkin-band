@@ -1,0 +1,44 @@
+.member-area{
+  font-size: 2rem;
+  color: $text-color-main;
+  padding-top: 1.5rem;
+
+  @media (min-width:670px){
+    padding-top: 6rem;
+  }
+  .member{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    
+    @media (min-width:670px){
+      flex-direction: column;
+      
+    }
+    &__position, &__name, &__photo{
+
+      @media (min-width:670px){
+        width: 40.5rem;
+      }
+    }
+
+    &__position{
+
+
+      @media (min-width:670px){
+        font-size: 1.2rem;
+
+      }
+    }
+
+    &__name{
+      padding: 0 1rem;
+
+      @media (min-width:670px){
+        padding: 2rem 0rem 0rem;
+
+      }
+    }
+  }
+}
