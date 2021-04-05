@@ -49,23 +49,68 @@ body {
   background-color: #282828;
 }
 
+nav {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+nav .nav-area__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3rem;
+}
+
+@media (min-width: 670px) {
+  nav .nav-area__list {
+    padding-top: 8rem;
+  }
+}
+
+nav .nav-area__list-item {
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+@media (min-width: 670px) {
+  nav .nav-area__list-item {
+    padding: 1rem;
+  }
+}
+
+nav .nav-area__list-item:nth-child(3) {
+  display: none;
+}
+
+@media (min-width: 670px) {
+  nav .nav-area__list-item:nth-child(3) {
+    display: inherit;
+  }
+}
+
 header .logo {
-  width: 4.5rem;
+  position: fixed;
+  width: 4rem;
   padding: 1rem;
 }
 
 @media (min-width: 670px) {
   header .logo {
-    width: 4rem;
+    width: 2.5rem;
+    padding: .5rem;
+    margin: .5rem;
   }
 }
 
 header .logo img {
   width: 100%;
-}
-
-header nav {
-  display: none;
 }
 
 header .banner {
@@ -92,7 +137,7 @@ header .banner {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-top: 8rem;
+    padding-top: 7.5rem;
   }
 }
 
@@ -152,7 +197,7 @@ header .band-desc__text {
 
 @media (min-width: 670px) {
   .member-area {
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 }
 
@@ -196,7 +241,72 @@ header .band-desc__text {
 
 @media (min-width: 670px) {
   .member-area .member__name {
-    padding: 2rem 0rem 0rem;
+    padding: 3rem 0rem 0rem;
   }
+}
+
+.album-area {
+  font-size: 2rem;
+  color: #ccc;
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 670px) {
+  .album-area {
+    padding-top: 9rem;
+  }
+}
+
+.album-area .album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 670px) {
+  .album-area .album__year, .album-area .album__title, .album-area .album__artwork {
+    width: 40.5rem;
+  }
+}
+
+.album-area .album__year {
+  font-size: 3.5rem;
+}
+
+@media (min-width: 670px) {
+  .album-area .album__year {
+    padding-top: 8rem;
+  }
+}
+
+.album-area .album__artwork img {
+  width: 100%;
+}
+
+footer {
+  color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+footer .copyright {
+  width: 40.5rem;
+  text-align: right;
 }
 /*# sourceMappingURL=main.css.map */

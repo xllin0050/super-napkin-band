@@ -1,43 +1,45 @@
-.member-area{
+.album-area{
   font-size: $font-size-name;
   color: $text-color-main;
   padding-top: 1.5rem;
 
   @media (min-width:670px){
-    padding-top: 5rem;
+    padding-top: 9rem;
   }
-  .member{
+  .album{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 1.5rem;
     
     @media (min-width:670px){
-      flex-direction: column;
       
     }
-    &__position, &__name, &__photo{
 
+    &__year, &__title, &__artwork{
+      
       @media (min-width:670px){
         width: 40.5rem;
       }
     }
 
-    &__position{
-
+    &__year{
+      font-size: $font-size-year;
 
       @media (min-width:670px){
-        font-size: $font-size-desc;
-
+        padding-top: 8rem;
       }
     }
 
-    &__name{
-      padding: 0 1rem;
+    &__title{
 
-      @media (min-width:670px){
-        padding: 3rem 0rem 0rem;
+    }
 
+    &__artwork{
+
+      img{
+        width: 100%;
       }
     }
   }

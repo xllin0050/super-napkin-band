@@ -1,18 +1,18 @@
 header{
 
   .logo{
-    width: 4.5rem;
+    position: fixed;
+    width: 4rem;
     padding: 1rem;
+
     @media (min-width:670px){
-      width: 4rem;
+      width: 2.5rem;
+      padding: .5rem;
+      margin: .5rem ;
     }
     img{
       width: 100%;
     }
-  }
-
-  nav{
-    display: none;
   }
 
   .banner{
@@ -25,13 +25,13 @@ header{
     
     @media (min-width:670px) {
       flex-direction: row;
-      padding-top: 8rem;
+      padding-top: 7.5rem;
 
     }
 
     &__title{
       text-transform: uppercase;
-      font-size: 6rem;
+      font-size: $font-size-title;
       letter-spacing: 0.5rem;
       color: $text-color-main;
 
@@ -60,7 +60,7 @@ header{
 
     &__text{
       color: $text-color-main;
-      font-size: 1.2rem;
+      font-size: $font-size-desc;
 
       @media (min-width:670px){
         margin-left: 25rem;

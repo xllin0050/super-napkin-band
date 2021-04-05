@@ -1,0 +1,35 @@
+nav{
+  font-size: $font-size-desc;
+  color: $text-color-main;
+
+  .nav-area{
+    
+    &__list{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 3rem;
+
+      @media (min-width:670px){
+        padding-top: 8rem;
+      }
+      &-item{
+        text-transform: uppercase;
+        padding: 0.5rem;
+
+        @media (min-width:670px){
+          padding: 1rem;
+        }
+      }
+
+      &-item:nth-child(3){
+        display: none;
+
+        @media (min-width:670px){
+          display: inherit;
+        }
+      }
+    }
+  }
+}
