@@ -248,6 +248,10 @@ header .band-desc__text {
 
 @media (min-width: 670px) {
   .member-area .member {
+    width: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -259,6 +263,8 @@ header .band-desc__text {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 3rem 2rem;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
 }
 
@@ -280,14 +286,12 @@ header .band-desc__text {
 
 @media (min-width: 670px) {
   .member-area .member.active {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: 50%;
-    font-weight: bold;
     letter-spacing: .4rem;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #ccc;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -moz-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ccc;
+    -moz-text-stroke-color: #ccc;
     -webkit-transform: scale(1.7) translateX(6rem);
             transform: scale(1.7) translateX(6rem);
   }
