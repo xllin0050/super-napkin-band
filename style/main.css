@@ -139,6 +139,7 @@ header .banner {
         -ms-flex-direction: row;
             flex-direction: row;
     padding-top: 7.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -229,9 +230,9 @@ header .band-desc__text {
 @media (min-width: 670px) {
   .member-area {
     width: 45rem;
-    margin: 8rem auto;
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    margin: 4rem auto 1rem;
+    -webkit-transition: background .7s ease-in-out;
+    transition: background .7s ease-in-out;
   }
 }
 
@@ -254,8 +255,8 @@ header .band-desc__text {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 15%;
-  -webkit-filter: grayscale(0.8);
-          filter: grayscale(0.8);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 @media (min-width: 670px) {
@@ -278,7 +279,6 @@ header .band-desc__text {
     -webkit-clip-path: polygon(91% 0, 100% 38%, 76% 93%, 9% 100%, 0 12%);
             clip-path: polygon(91% 0, 100% 38%, 76% 93%, 9% 100%, 0 12%);
     background-position: 50% 10%;
-    top: 40%;
   }
 }
 
@@ -313,8 +313,11 @@ header .band-desc__text {
             align-items: flex-start;
     letter-spacing: .2rem;
     padding: 3rem 2rem;
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    -webkit-transition: transform .4s ease-out;
+    -webkit-transition: -webkit-transform .4s ease-out;
+    transition: -webkit-transform .4s ease-out;
+    transition: transform .4s ease-out;
+    transition: transform .4s ease-out, -webkit-transform .4s ease-out;
   }
 }
 
@@ -332,6 +335,12 @@ header .band-desc__text {
   .member-area .member__name {
     margin: unset;
   }
+}
+
+.member-area .member.active {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media (min-width: 670px) {
