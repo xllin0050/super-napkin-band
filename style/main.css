@@ -49,6 +49,21 @@ body {
   background-color: #282828;
 }
 
+.container {
+  position: relative;
+}
+
+.noise {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  opacity: .035;
+}
+
 nav {
   font-size: 1.2rem;
   color: #ccc;
@@ -312,6 +327,7 @@ header .band-desc__text {
         -ms-flex-align: start;
             align-items: flex-start;
     letter-spacing: .2rem;
+    margin-top: 1rem;
     padding: 3rem 2rem;
     -webkit-transition: transform .4s ease-out;
     -webkit-transition: -webkit-transform .4s ease-out;
@@ -366,6 +382,12 @@ header .band-desc__text {
   margin-top: 2rem;
 }
 
+@media (min-width: 670px) {
+  .album-area {
+    margin-top: .5rem;
+  }
+}
+
 .album-area .album {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,18 +406,45 @@ header .band-desc__text {
 }
 
 @media (min-width: 670px) {
+  .album-area .album {
+    padding-top: 3rem;
+  }
+}
+
+@media (min-width: 670px) {
   .album-area .album__year, .album-area .album__title, .album-area .album__artwork {
     width: 40.5rem;
   }
 }
 
 .album-area .album__year {
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 670px) {
   .album-area .album__year {
-    padding-top: 8rem;
+    padding: 1rem 3rem 0;
+  }
+}
+
+.album-area .album__title {
+  font-size: 2rem;
+}
+
+@media (min-width: 670px) {
+  .album-area .album__title {
+    padding: 0 3rem;
+  }
+}
+
+.album-area .album__artwork {
+  width: 70%;
+  padding: 1rem 2rem;
+}
+
+@media (min-width: 670px) {
+  .album-area .album__artwork {
+    width: 60%;
   }
 }
 
