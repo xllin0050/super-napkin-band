@@ -1,9 +1,10 @@
 .member-area{
-  font-size: $font-size-name;
+  font-size: $font-size-mobile;
   color: $text-color-main;
   margin-top: 1.5rem;
 
   @media (min-width:670px){
+    font-size: $font-size-name;
     width: 45rem;
     margin: 4rem auto 1rem;
     -webkit-transition: background .5s ease-in-out;
@@ -49,8 +50,12 @@
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
+    padding: 0 2rem;
+    mix-blend-mode: difference;
+
     
     @media (min-width:670px){
+      mix-blend-mode: normal;
       width: 100%;
       display: inline-flex;
       flex-direction: column;
@@ -64,6 +69,15 @@
       transition: transform .4s ease-out, width .3s ease-out;
     }
 
+    &:nth-last-child(1){
+
+      @media (min-width:670px){
+      padding: 3rem 2rem 0;
+      margin-bottom: 3rem;
+      }
+    }
+  
+
     &__position{
       @media (min-width:670px){
         font-size: $font-size-desc;
@@ -71,7 +85,7 @@
     }
 
     &__name{
-      margin: 0 1rem;
+      margin: 0 .5rem;
       @media (min-width:670px){
         margin: unset;
       }

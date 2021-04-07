@@ -47,6 +47,8 @@ html {
 
 body {
   background-color: #282828;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
 }
 
 .container {
@@ -93,6 +95,7 @@ nav .nav-area__list-item {
   display: inline-block;
   text-transform: uppercase;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 @media (min-width: 670px) {
@@ -115,6 +118,7 @@ header .logo {
   position: fixed;
   width: 4rem;
   padding: 1rem;
+  cursor: pointer;
 }
 
 @media (min-width: 670px) {
@@ -237,13 +241,14 @@ header .band-desc__text {
 }
 
 .member-area {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #ccc;
   margin-top: 1.5rem;
 }
 
 @media (min-width: 670px) {
   .member-area {
+    font-size: 2rem;
     width: 45rem;
     margin: 4rem auto 1rem;
     -webkit-transition: background .5s ease-in-out;
@@ -308,10 +313,13 @@ header .band-desc__text {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 1.5rem;
+  padding: 0 2rem;
+  mix-blend-mode: difference;
 }
 
 @media (min-width: 670px) {
   .member-area .member {
+    mix-blend-mode: normal;
     width: 100%;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -338,13 +346,20 @@ header .band-desc__text {
 }
 
 @media (min-width: 670px) {
+  .member-area .member:nth-last-child(1) {
+    padding: 3rem 2rem 0;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 670px) {
   .member-area .member__position {
     font-size: 1.2rem;
   }
 }
 
 .member-area .member__name {
-  margin: 0 1rem;
+  margin: 0 .5rem;
 }
 
 @media (min-width: 670px) {
@@ -421,11 +436,12 @@ header .band-desc__text {
 }
 
 .album-area .album__title {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 670px) {
   .album-area .album__title {
+    font-size: 2.2rem;
     width: 15ch;
     padding: .5rem 5rem 0;
     color: transparent;
@@ -552,6 +568,59 @@ footer .copyright {
   100% {
     text-shadow: -0.025em 0 0 rgba(255, 175, 204, 0.75), -0.025em -0.025em 0 rgba(149, 213, 178, 0.75), -0.025em -0.05em 0 rgba(162, 210, 255, 0.75);
   }
+}
+
+.cursor1, .cursor2 {
+  position: fixed;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -50px;
+  top: 50%;
+  mix-blend-mode: difference;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  display: none;
+}
+
+@media (min-width: 670px) {
+  .cursor1, .cursor2 {
+    display: unset;
+  }
+}
+
+.cursor1 {
+  background-color: #fff;
+  height: 0;
+  width: 0;
+  z-index: 99999;
+}
+
+.cursor2 {
+  height: 30px;
+  width: 30px;
+  z-index: 99998;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.cursor2.hover {
+  -webkit-transform: scale(2) translateX(-25%) translateY(-25%);
+  transform: scale(2) translateX(-25%) translateY(-25%);
+  border: none;
+}
+
+.cursor2 {
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+
+.cursor2.hover {
+  background: white;
+  -webkit-box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {

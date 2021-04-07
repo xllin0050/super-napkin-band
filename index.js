@@ -145,5 +145,34 @@ const noise = () => {
       setup();
   })();
 };
-
 noise();
+
+let ms1 = document.querySelector('#cursor1')
+let ms2 = document.querySelector('#cursor2')
+// let ms3 = document.querySelector('#cursor3')
+
+
+document.querySelector("body").addEventListener("mousemove", function(n) {
+
+  ms1.style.left = n.clientX + "px"
+  ms1.style.top = n.clientY + "px"
+  ms2.style.left = n.clientX + "px"
+  ms2.style.top = n.clientY + "px"
+  // ms3.style.left = n.clientX + "px"
+  // ms3.style.top = n.clientY + "px"
+});
+
+let fcs = document.querySelectorAll(".hover-target")
+for (a = fcs.length - 1; a >= 0; a--) {
+  o(fcs[a])
+}
+function o(ms1) {
+  ms1.addEventListener("mouseover", n), ms1.addEventListener("mouseout", s)
+}
+
+function n(ms1) {
+  ms2.classList.add("hover")
+}
+function s(ms1) {
+  ms2.classList.remove("hover")
+}

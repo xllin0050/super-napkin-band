@@ -30,9 +30,10 @@
     // }
 
     &__title{
-      font-size: $font-size-album;
+      font-size: $font-size-mobile;
       
       @media (min-width:670px){
+        font-size: $font-size-album;
         width: 15ch;
         padding: .5rem 5rem 0;
         color: transparent;
