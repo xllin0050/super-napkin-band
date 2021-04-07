@@ -2,13 +2,13 @@
   font-size: $font-size-name;
   color: $text-color-main;
   margin-top: 1.5rem;
- 
+
   @media (min-width:670px){
     width: 45rem;
     margin: 4rem auto 1rem;
-    -webkit-transition: background .7s ease-in-out;
-    -moz-transition: background .7s ease-in-out;
-    transition: background .7s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+    transition: background .5s ease-in-out;
   }
 
   &[data-bg="0"]{

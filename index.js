@@ -51,10 +51,11 @@ member.forEach((n, i)=>{
       n.classList.add('disappear')
     }
     member_background.removeAttribute('data-bg')
+    
   })
-  member_background.addEventListener('mouseleave',function(){
-    n.classList.remove('disappear')
-  })
+    member_background.addEventListener('mouseleave',function(){
+      n.classList.remove('disappear')
+    })
 })
 
 const noise = () => {

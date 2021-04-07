@@ -246,8 +246,8 @@ header .band-desc__text {
   .member-area {
     width: 45rem;
     margin: 4rem auto 1rem;
-    -webkit-transition: background .7s ease-in-out;
-    transition: background .7s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+    transition: background .5s ease-in-out;
   }
 }
 
