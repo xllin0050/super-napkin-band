@@ -50,7 +50,7 @@
     margin-top: 1.5rem;
     
     @media (min-width:670px){
-      width: 50%;
+      width: 100%;
       display: inline-flex;
       flex-direction: column;
       justify-content: center;
@@ -60,7 +60,7 @@
       padding: 3rem 2rem;
       -webkit-transition: transform .4s ease-out;
       -moz-transition: transform .4s ease-out;
-      transition: transform .4s ease-out;
+      transition: transform .4s ease-out, width .3s ease-out;
     }
 
     &__position{
@@ -78,7 +78,9 @@
 
     &.active{
       justify-content: flex-end;
-      @media (min-width:670px){     
+      @media (min-width:670px){ 
+      width: 50%;
+        
         letter-spacing: .4rem;
         color: transparent;
         -webkit-text-stroke-width: 1px;

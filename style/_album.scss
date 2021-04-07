@@ -45,14 +45,24 @@
     &__artwork{
       width: 70%;
       padding: 1rem 2rem;
+      position: relative;
+
+
 
       @media (min-width:670px){
-        width: 60%;
+        width: 50%;
       }
       img{
         width: 100%;
-
+        filter: blur(5px) grayscale(1);
       }
+    }
+
+    .mask{
+
+      color: rgba(0, 0, 0, 0.75);
+      position: relative;
+      z-index: 10;
     }
   }
 }

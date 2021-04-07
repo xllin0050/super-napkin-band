@@ -1,5 +1,13 @@
+const logo = document.querySelector('.logo')
+const noise_bg = document.querySelector('#noise')
 const member_background = document.querySelector('.member-area')
 const member = document.querySelectorAll('.member')
+
+logo.addEventListener('click', function(){
+  
+    noise_bg.style.opacity="0"
+  
+})
 
 member.forEach((n, i)=>{
   member_background.addEventListener('mouseenter',function(){
