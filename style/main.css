@@ -286,14 +286,14 @@ header .band-desc__text {
   background-image: url("/assets/member-photo/shih.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 15%;
+  background-position: 35% 10%;
 }
 
 @media (min-width: 670px) {
   .member-area[data-bg="2"] {
     -webkit-clip-path: polygon(91% 0, 100% 38%, 76% 93%, 9% 100%, 0 12%);
             clip-path: polygon(91% 0, 100% 38%, 76% 93%, 9% 100%, 0 12%);
-    background-position: 50% 10%;
+    background-position: 50% 0%;
   }
 }
 
@@ -385,7 +385,8 @@ header .band-desc__text {
 
 @media (min-width: 670px) {
   .album-area {
-    margin-top: .5rem;
+    width: 45rem;
+    margin: .5rem auto 0;
   }
 }
 
@@ -409,57 +410,84 @@ header .band-desc__text {
 @media (min-width: 670px) {
   .album-area .album {
     padding-top: 3rem;
-  }
-}
-
-@media (min-width: 670px) {
-  .album-area .album__year, .album-area .album__title, .album-area .album__artwork {
-    width: 40.5rem;
-  }
-}
-
-.album-area .album__year {
-  font-size: 2rem;
-}
-
-@media (min-width: 670px) {
-  .album-area .album__year {
-    padding: 1rem 3rem 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
 .album-area .album__title {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 @media (min-width: 670px) {
   .album-area .album__title {
-    padding: 0 3rem;
+    width: 15ch;
+    padding: .5rem 5rem 0;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -moz-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ccc;
+    -moz-text-stroke-color: #ccc;
+  }
+}
+
+.album-area .album__title-year {
+  display: none;
+}
+
+@media (min-width: 670px) {
+  .album-area .album__title-year {
+    display: unset;
+  }
+}
+
+@media (min-width: 670px) {
+  .album-area .album .frameWord {
+    color: unset;
+    -webkit-text-stroke-width: unset;
+    -moz-text-stroke-width: unset;
+    -webkit-text-stroke-color: unset;
+    -moz-text-stroke-color: unset;
   }
 }
 
 .album-area .album__artwork {
-  width: 70%;
-  padding: 1rem 2rem;
-  position: relative;
+  width: 65%;
+  padding: 1rem 3rem;
 }
 
 @media (min-width: 670px) {
   .album-area .album__artwork {
-    width: 50%;
+    width: 65%;
+    padding: 1rem 2rem;
   }
 }
 
 .album-area .album__artwork img {
   width: 100%;
-  -webkit-filter: blur(5px) grayscale(1);
-          filter: blur(5px) grayscale(1);
+  -webkit-transition: -webkit-filter 250ms;
+  transition: -webkit-filter 250ms;
+  transition: filter 250ms;
+  transition: filter 250ms, -webkit-filter 250ms;
+  -webkit-filter: blur(0) grayscale(1);
+          filter: blur(0) grayscale(1);
 }
 
-.album-area .album .mask {
-  color: rgba(0, 0, 0, 0.75);
-  position: relative;
-  z-index: 10;
+@media (min-width: 670px) {
+  .album-area .album__artwork img {
+    -webkit-filter: blur(2px) grayscale(1);
+            filter: blur(2px) grayscale(1);
+  }
+}
+
+.album-area .album__artwork .unMask {
+  -webkit-filter: blur(0) grayscale(0);
+          filter: blur(0) grayscale(0);
 }
 
 footer {

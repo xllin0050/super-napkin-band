@@ -2,11 +2,32 @@ const logo = document.querySelector('.logo')
 const noise_bg = document.querySelector('#noise')
 const member_background = document.querySelector('.member-area')
 const member = document.querySelectorAll('.member')
+const cover = document.querySelectorAll('#cover')
+const albumT = document.querySelectorAll('.album__title')
 
 logo.addEventListener('click', function(){
   
-    noise_bg.style.opacity="0"
+    noise_bg.style.opacity=0
   
+})
+
+cover.forEach((e, i)=>{
+  e.addEventListener('mouseenter',function(){
+    e.classList.add('unMask')
+    albumT.forEach((f, l)=>{
+      if ( i == l){
+        f.classList.add('frameWord')
+      }
+    })
+  })
+  e.addEventListener('mouseleave', function(){
+    e.classList.remove('unMask')
+    albumT.forEach((f, l)=>{
+      if ( i == l){
+        f.classList.remove('frameWord')
+      }
+    })
+  })
 })
 
 member.forEach((n, i)=>{
@@ -35,14 +56,6 @@ member.forEach((n, i)=>{
     n.classList.remove('disappear')
   })
 })
-
-
-
-
-// window.addEventListener('scroll',function(){
-//   let  position = window.scrollY
-
-// })
 
 const noise = () => {
   let canvas, ctx;
@@ -133,4 +146,3 @@ const noise = () => {
 };
 
 noise();
-

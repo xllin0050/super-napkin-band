@@ -4,8 +4,9 @@
   margin-top: 2rem;
 
   @media (min-width:670px){
-    margin-top: .5rem;
-    
+    width: 45rem;
+    // margin-top: .5rem;
+    margin: .5rem auto 0;
   }
   .album{
     display: flex;
@@ -16,53 +17,79 @@
     
     @media (min-width:670px){
     padding-top: 3rem;
+    flex-direction: row-reverse;
+    align-items: flex-start;
       
     }
 
-    &__year, &__title, &__artwork{
+    // &__year, &__title, &__artwork{
       
-      @media (min-width:670px){
-        width: 40.5rem;
-      }
-    }
-
-    &__year{
-      font-size: $font-size-name;
-
-      @media (min-width:670px){
-        padding: 1rem 3rem 0;
-      }
-    }
+    //   @media (min-width:670px){
+    //     width: 40.5rem;
+    //   }
+    // }
 
     &__title{
-      font-size: $font-size-name;
+      font-size: $font-size-album;
+      
+      @media (min-width:670px){
+        width: 15ch;
+        padding: .5rem 5rem 0;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -moz-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $text-color-main;
+        -moz-text-stroke-color: $text-color-main;
+      }
+
+      &-year{
+        display: none;
+
+        @media (min-width:670px){
+          display: unset;
+        }
+      }
+    }
+
+    .frameWord{
 
       @media (min-width:670px){
-        padding: 0 3rem;
+        
+        color: unset;
+        -webkit-text-stroke-width: unset;
+        -moz-text-stroke-width: unset;
+        -webkit-text-stroke-color: unset;
+        -moz-text-stroke-color: unset;
       }
     }
 
     &__artwork{
-      width: 70%;
-      padding: 1rem 2rem;
-      position: relative;
-
-
+      width: 65%;
+      padding: 1rem 3rem;
 
       @media (min-width:670px){
-        width: 50%;
+      width: 65%;
+      padding: 1rem 2rem;
       }
+
       img{
         width: 100%;
-        filter: blur(5px) grayscale(1);
+        transition: filter 250ms;
+        filter: blur(0) grayscale(1);
+        @media (min-width:670px){
+          filter: blur(2px) grayscale(1);
+        }
+
+      }
+      .unMask{
+        filter: blur(0) grayscale(0);
+
+        @media (min-width:670px){
+  
+        }
       }
     }
 
-    .mask{
 
-      color: rgba(0, 0, 0, 0.75);
-      position: relative;
-      z-index: 10;
-    }
   }
 }
